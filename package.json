@@ -1,0 +1,43 @@
+{
+  "name": "@blackbelt-technology/pi-model-proxy",
+  "version": "0.0.0",
+  "description": "Pi extension that exposes pi's authenticated models as a local OpenAI-compatible and Anthropic-compatible API server",
+  "type": "module",
+  "main": "index.ts",
+  "files": [
+    "index.ts",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "npx -p typescript tsc --noEmit --esModuleInterop --moduleResolution bundler --module esnext --target esnext --skipLibCheck index.ts"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "openai-proxy",
+    "anthropic-proxy",
+    "llm-proxy",
+    "model-proxy"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BlackBeltTechnology/pi-model-proxy.git"
+  },
+  "homepage": "https://github.com/BlackBeltTechnology/pi-model-proxy#readme",
+  "bugs": {
+    "url": "https://github.com/BlackBeltTechnology/pi-model-proxy/issues"
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-ai": ">=0.60.0",
+    "@mariozechner/pi-coding-agent": ">=0.60.0"
+  },
+  "devDependencies": {
+    "@mariozechner/pi-ai": "*",
+    "@mariozechner/pi-coding-agent": "*",
+    "vitest": "^4.1.2"
+  }
+}
