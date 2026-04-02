@@ -40,6 +40,14 @@ The project publishes `@blackbelt-technology/pi-model-proxy` to npm via `.github
 
 **Rationale:** Provenance is the primary value-add of trusted publishing beyond security. It creates a verifiable link from the published package to the exact commit and CI run. No downside — it's metadata attached to the publish, not a behavioral change.
 
+### 4. Use Node 24 in release workflow
+
+**Decision:** Upgrade the release workflow from Node 22 to Node 24.
+
+**Rationale:** Trusted publishing requires npm CLI 11.5.1+, which ships with Node 24. Node 22 ships with npm v10, which doesn't support the OIDC handshake and fails with a misleading `E404 Not Found` error. Discovered during implementation — the npm docs mention the version requirement but the error message gives no indication of the root cause.
+
+**Alternatives:** Installing npm@latest on Node 22 — rejected because it adds complexity and Node 24 is current LTS.
+
 ## Risks / Trade-offs
 
 - **[One-way migration]** → Once `NPM_TOKEN` secret is deleted, the old workflow cannot publish. Mitigation: The secret can be re-created if needed, and OIDC is a well-tested npm feature.

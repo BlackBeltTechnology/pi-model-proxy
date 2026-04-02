@@ -32,7 +32,7 @@ _(none — no existing specs)_
 Trusted publishing is configured in **package settings** on npmjs.com, which means the package must already exist. Since `@blackbelt-technology/pi-model-proxy` has not been published yet, we first do a one-time manual publish, then configure trusted publishing for all future releases.
 
 > **Prerequisites:**
-> - npm CLI version **11.5.1 or later** and Node **22.14.0 or higher** (required for OIDC support)
+> - Node **24 or higher** (ships with npm CLI 11.5.1+ required for OIDC; Node 22 ships npm v10 which silently fails with a misleading 404)
 > - Admin access to the `@blackbelt-technology` npm organization
 > - The `repository.url` field in `package.json` must exactly match the GitHub repository URL
 
