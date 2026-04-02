@@ -1,6 +1,6 @@
 {
   "name": "@blackbelt-technology/pi-model-proxy",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Pi extension that exposes pi's authenticated models as a local OpenAI-compatible and Anthropic-compatible API server",
   "type": "module",
   "main": "index.ts",
